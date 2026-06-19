@@ -4,6 +4,7 @@
 <!doctype html>
 <html lang="es">
 
+<!-- Configuracion de la pagina incluyendo tipografias, iconos y titulo -->
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
@@ -16,9 +17,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <html lang="es" id="html-root"></html>
   <title>Inicio</title>
 </head>
 
+<!-- Configuracion visual de la pagina -->
 <style>
   .dropdown-icon {
     width: 20px;
@@ -90,25 +93,12 @@
       <img src="APADEMLogo.png" class="img-thumbnail" alt="APADEM Colonias Unidas" style="width: 50px; height: auto" />
     </a>
 
-    <div class="dropdown ml-3">
-      <a class="nav-link dropdown-toggle p-0" id="Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        <i class="flag-united-kingdom flag"></i>
-      </a>
-      <div class="dropdown-menu" aria-labelledby="Dropdown">
-        <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English
-          <i class="fa fa-check text-success ms-2"></i></a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-        <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-        <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-        <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-        <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-        <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-        <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-        <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-      </div>
-    </div>
+    <select id="lang-selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="ja">日本語</option>
+    </select>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
       aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -118,24 +108,24 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mx-auto text-center">
         <li class="nav-item active">
-          <a class="nav-link" href="inicio.html">Inicio</a>
+          <a class="nav-link" data-key="inicio" href="inicio.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="nostros.html">Sobre Nosotros</a>
+          <a class="nav-link" data-key="nosotros" href="nostros.html">Sobre Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="logros.html">Transparencia</a>
+          <a class="nav-link" data-key="transparencia" href="logros.html">Transparencia</a>
         </li>
       </ul>
 
-      <a class="btn btn-donaciones my-2 my-sm-0" role="button" href="donaciones.html">
+      <a class="btn btn-donaciones my-2 my-sm-0" role="button" data-key="donaciones1" href="donaciones.html">
         Donaciones
       </a>
     </div>
   </nav>
 
-  <! -- Parte del medio --!>
-    <h1 style="text-align: center">APADEM Colonias Unidas</h1>
+  <!-- Parte del medio -->
+    <h1 style="text-align: center" data-key="titulo">APADEM Colonias Unidas</h1>
 
     <!-- Carrusel de Imagenes -->
     <div class="slider">
@@ -143,28 +133,32 @@
         <img class="slide" src="img/APADEM1.jpg" alt="Image #1">
         <img class="slide" src="img/APADEM2.jpg" alt="Image #2">
         <img class="slide" src="img/APADEM3.jpg" alt="Image #3">
+        <img class="slide" src="img/APADEM4.jpg" alt="Image #4">
+        <img class="slide" src="img/APADEM5.jpg" alt="Image #5">
+        <img class="slide" src="img/APADEM6.jpg" alt="Image #6">
+        <img class="slide" src="img/APADEM7.jpg" alt="Image #7">
       </div>
       <button class="prev" onclick="prevSlide()">&#10094</button>
       <button class="next" onclick="nextSlide()">&#10095</button>
       <script src="index.js"></script>
     </div>
 
-    <!-- Listado de servicios-->>
+    <!-- Listado de servicios -->
 
     <div class="servicios-wrapper">
-      <h2 class="titulo">Nuestros Servicios</h2>
+      <h2 class="titulo" data-key="servi0">Nuestros Servicios</h2>
       <ul class="listado_atenciones">
-          <li>Atención médica a cargo de especialistas</li>
-          <li>Entrega de medicamentos</li>
-          <li>Pago de escuelas especializadas</li>
-          <li>Entrega de silla de ruedas</li>
-          <li>Cirugías de pie bot</li>
-          <li>Pago de traslado de pacientes</li>
-          <li>Tratamientos para sordos</li>
-          <li>Atención, tratamiento y cirugías de problemas oftalmológicos</li>
-          <li>Cirugías de ano imperforado</li>
-          <li>Cirugías de labio leporino y fisura palatina</li>
-          <li>Rehabilitación, estimulación temprana, ortodoncia, en el H.P.M.</li>
+          <li data-key="servi1">Atención médica a cargo de especialistas</li>
+          <li data-key="servi2">Entrega de medicamentos</li>
+          <li data-key="servi3">Pago de escuelas especializadas</li>
+          <li data-key="servi4">Entrega de silla de ruedas</li>
+          <li data-key="servi5">Cirugías de pie bot</li>
+          <li data-key="servi6">Pago de traslado de pacientes</li>
+          <li data-key="servi7">Tratamientos para sordos</li>
+          <li data-key="servi8">Atención, tratamiento y cirugías de problemas oftalmológicos</li>
+          <li data-key="servi9">Cirugías de ano imperforado</li>
+          <li data-key="serviA">Cirugías de labio leporino y fisura palatina</li>
+          <li data-key="serviB">Rehabilitación, estimulación temprana, ortodoncia, en el H.P.M.</li>
       </ul>
     </div>
 
@@ -187,7 +181,7 @@
 
         <!-- Section: Text -->
         <section class="mb-4">
-          <p>
+          <p data-key="descripcion">
             Asociación de Padres y Amigos del Impedido Mental y Físico de las
             Colonias Unidas. Desde 1982. Asociación civil sin fines de lucro,
             administrada por los propios padres y personas de buena voluntad,
@@ -201,11 +195,12 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         Est. 1982-2026:
-        <a class="text-dark">APADEM Colonias Unidas. Telefono: 071720524 – 0983 533111</a>
+        <a class="text-dark" data-key="contacto">APADEM Colonias Unidas. Telefono: 071720524 – 0983 533111</a>
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+     <script src="app.js"></script>
 </body>
 
 </html>
