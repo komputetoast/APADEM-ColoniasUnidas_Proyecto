@@ -1,0 +1,167 @@
+<!-- Diseñar y desarrollar un prototipo de sitio web institucional para APADEM Colonias Unidas que potencie su visibilidad y reconocimiento en la comunidad, brindando a los estudiantes la oportunidad de aplicar sus competencias en programación web, bases de datos y seguridad dentro de un proyecto real con vinculación social. -->
+
+<!-- PARTE FRONT-END -->
+<!doctype html>
+<html lang="es">
+
+<!-- Configuracion de la pagina incluyendo tipografias, iconos y titulo -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <html lang="es" id="html-root"></html>
+  <title>Inicio</title>
+</head>
+
+<!-- Configuracion visual de la pagina -->
+<style>
+  .dropdown-icon {
+    width: 20px;
+    height: auto;
+    margin-left: 8px;
+  }
+
+  .dropdown-item img {
+    width: 18px;
+    height: auto;
+    margin-left: 8px;
+  }
+
+  h2.title {
+    text-align: center;
+    color: #2e6fcf;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .servicios-wrapper {
+    text-align: center;
+  }
+
+  .listado_atenciones {
+    display: inline-block;
+    text-align: left;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    column-gap: 2rem;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    list-style-position: inside;
+  }
+  .listado_atenciones li {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .btn-donaciones {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .btn-donaciones:hover,
+  .btn-donaciones:focus {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+</style>
+
+<body>
+  <!-- ENCABEZADO O BARRA DE NAVEGACIÓN -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="inicio.html">
+      <img src="APADEMLogo.png" class="img-thumbnail" alt="APADEM Colonias Unidas" style="width: 50px; height: auto" />
+    </a>
+
+    <select id="lang-selector">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="ja">日本語</option>
+    </select>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item active">
+          <a class="nav-link" data-key="inicio" href="inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-key="nosotros" href="nosotros.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-key="transparencia" href="logros.html">Transparencia</a>
+        </li>
+      </ul>
+
+      <a class="btn btn-donaciones my-2 my-sm-0" role="button" data-key="donaciones1" href="donaciones.html">
+        Donaciones
+      </a>
+    </div>
+  </nav>
+
+  <!-- Parte del medio -->
+    <h1 style="text-align: center" data-key="titulo">Donaciones</h1>
+    <h3 style="text-align: center" data-key="titulo">Bajo construccion!</h3>
+
+    <!-- Parte de abajo -->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Red Social -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+            href="https://www.facebook.com/p/APADEM-Colonias-Unidas-100064617312954/" role="button"><i
+              class="fab fa-facebook-f"></i></a>
+        </section>
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p data-key="descripcion">
+            Asociación de Padres y Amigos del Impedido Mental y Físico de las
+            Colonias Unidas. Desde 1982. Asociación civil sin fines de lucro,
+            administrada por los propios padres y personas de buena voluntad,
+            que no tienen carácter político, religioso o sectario alguno.
+          </p>
+        </section>
+        <!-- Section: Text -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Est. 1982-2026:
+        <a class="text-dark" data-key="contacto">APADEM Colonias Unidas. Telefono: 071720524 – 0983 533111</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+     <script src="app.js"></script>
+</body>
+
+</html>
