@@ -5,6 +5,7 @@
 <html lang="es">
 
 <!-- Configuracion de la pagina incluyendo tipografias, iconos y titulo -->
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
@@ -15,9 +16,12 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <html lang="es" id="html-root"></html>
+  <html lang="es" id="html-root">
+
+  </html>
   <title>Inicio</title>
 </head>
 
@@ -59,6 +63,7 @@
     max-width: 800px;
     list-style-position: inside;
   }
+
   .listado_atenciones li {
     margin-bottom: 0.5rem;
   }
@@ -74,6 +79,12 @@
     border-color: #0d6efd;
   }
 
+  .btn-pacientes {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
   body {
     font-family: 'IBM Plex Sans', sans-serif;
   }
@@ -83,6 +94,13 @@
     color: #000;
     background-color: #ffc107;
     border-color: #ffc107;
+  }
+
+  .btn-pacientes:hover,
+  .btn-pacientes:focus {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
   }
 </style>
 
@@ -94,10 +112,10 @@
     </a>
 
     <select id="lang-selector">
-        <option value="es">Español</option>
-        <option value="en">English</option>
-        <option value="de">Deutsch</option>
-        <option value="ja">日本語</option>
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="de">Deutsch</option>
+      <option value="ja">日本語</option>
     </select>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -111,7 +129,8 @@
           <a class="nav-link" data-key="inicio" href="inicio.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-key="nosotros" href="nosotros.html">Sobre Nosotros</a>
+          <a class="nav-link" data-key="nosotros" href="nosotros.html">Sobre
+            Nosotros</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-key="transparencia" href="logros.html">Transparencia</a>
@@ -121,86 +140,96 @@
       <a class="btn btn-donaciones my-2 my-sm-0" role="button" data-key="donaciones1" href="donaciones.html">
         Donaciones
       </a>
+      <a class="btn btn-pacientes my-2 my-sm-0 ms-2" role="button" data-key="pacientes" href="pacientes.php">
+        Pacientes
+      </a>
     </div>
   </nav>
 
   <!-- Parte del medio -->
-    <h1 style="text-align: center" data-key="titulo">APADEM Colonias Unidas</h1>
+  <h1 style="text-align: center" data-key="titulo">APADEM Colonias Unidas</h1>
 
-    <!-- Carrusel de Imagenes -->
-    <div class="slider">
-      <div class="slides">
-        <img class="slide" src="img/APADEM1.jpg" alt="Image #1">
-        <img class="slide" src="img/APADEM2.jpg" alt="Image #2">
-        <img class="slide" src="img/APADEM3.jpg" alt="Image #3">
-        <img class="slide" src="img/APADEM4.jpg" alt="Image #4">
-        <img class="slide" src="img/APADEM5.jpg" alt="Image #5">
-        <img class="slide" src="img/APADEM6.jpg" alt="Image #6">
-        <img class="slide" src="img/APADEM7.jpg" alt="Image #7">
-      </div>
-      <button class="prev" onclick="prevSlide()">&#10094</button>
-      <button class="next" onclick="nextSlide()">&#10095</button>
-      <script src="index.js"></script>
+  <!-- Carrusel de Imagenes -->
+  <div class="slider">
+    <div class="slides">
+      <img class="slide" src="img/APADEM1.jpg" alt="Image #1">
+      <img class="slide" src="img/APADEM2.jpg" alt="Image #2">
+      <img class="slide" src="img/APADEM3.jpg" alt="Image #3">
+      <img class="slide" src="img/APADEM4.jpg" alt="Image #4">
+      <img class="slide" src="img/APADEM5.jpg" alt="Image #5">
+      <img class="slide" src="img/APADEM6.jpg" alt="Image #6">
+      <img class="slide" src="img/APADEM7.jpg" alt="Image #7">
     </div>
+    <button class="prev" onclick="prevSlide()">&#10094</button>
+    <button class="next" onclick="nextSlide()">&#10095</button>
+    <script src="index.js"></script>
+  </div>
 
-    <!-- Listado de servicios -->
+  <!-- Listado de servicios -->
 
-    <div class="servicios-wrapper">
-      <h2 class="titulo" data-key="servi0">Nuestros Servicios</h2>
-      <ul class="listado_atenciones">
-          <li data-key="servi1">Atención médica a cargo de especialistas</li>
-          <li data-key="servi2">Entrega de medicamentos</li>
-          <li data-key="servi3">Pago de escuelas especializadas</li>
-          <li data-key="servi4">Entrega de silla de ruedas</li>
-          <li data-key="servi5">Cirugías de pie bot</li>
-          <li data-key="servi6">Pago de traslado de pacientes</li>
-          <li data-key="servi7">Tratamientos para sordos</li>
-          <li data-key="servi8">Atención, tratamiento y cirugías de problemas oftalmológicos</li>
-          <li data-key="servi9">Cirugías de ano imperforado</li>
-          <li data-key="serviA">Cirugías de labio leporino y fisura palatina</li>
-          <li data-key="serviB">Rehabilitación, estimulación temprana, ortodoncia, en el H.P.M.</li>
-      </ul>
+  <div class="servicios-wrapper">
+    <h2 class="titulo" data-key="servi0">Nuestros Servicios</h2>
+    <ul class="listado_atenciones">
+      <li data-key="servi1">Atención médica a cargo de especialistas</li>
+      <li data-key="servi2">Entrega de medicamentos</li>
+      <li data-key="servi3">Pago de escuelas especializadas</li>
+      <li data-key="servi4">Entrega de silla de ruedas</li>
+      <li data-key="servi5">Cirugías de pie bot</li>
+      <li data-key="servi6">Pago de traslado de pacientes</li>
+      <li data-key="servi7">Tratamientos para sordos</li>
+      <li data-key="servi8">Atención, tratamiento y cirugías de problemas
+        oftalmológicos</li>
+      <li data-key="servi9">Cirugías de ano imperforado</li>
+      <li data-key="serviA">Cirugías de labio leporino y fisura palatina</li>
+      <li data-key="serviB">Rehabilitación, estimulación temprana, ortodoncia,
+        en el H.P.M.</li>
+    </ul>
+  </div>
+
+  <!-- Publicaciones en Facebook -->
+  <div style="text-align: match-parent;">
+    <iframe
+      src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0oNye5cA9knG9dhsR9HUcRwcpn6DByifLCuY4RCMFhBDCLsZWgMPaKNQTwQpbB6b9l%26id%3D100064617312954&show_text=true&width=500"
+      width="500" height="787" style="display: block; margin: 0 auto; border: none; overflow: hidden;" scrolling="no"
+      frameborder="0" allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </div>
+
+  <!-- Parte de abajo -->
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Red Social -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
+          href="https://www.facebook.com/p/APADEM-Colonias-Unidas-100064617312954/" role="button"><i
+            class="fab fa-facebook-f"></i></a>
+      </section>
+
+      <!-- Descripcion -->
+      <section class="mb-4">
+        <p data-key="descripcion">
+          Asociación de Padres y Amigos del Impedido Mental y Físico de las
+          Colonias Unidas. Desde 1982. Asociación civil sin fines de lucro,
+          administrada por los propios padres y personas de buena voluntad,
+          que no tienen carácter político, religioso o sectario alguno.
+        </p>
+      </section>
+      <!-- Descripcion -->
     </div>
-
-    <!-- Publicaciones en Facebook -->
-    <div style="text-align: match-parent;">
-      <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0oNye5cA9knG9dhsR9HUcRwcpn6DByifLCuY4RCMFhBDCLsZWgMPaKNQTwQpbB6b9l%26id%3D100064617312954&show_text=true&width=500" width="500" height="787" style="display: block; margin: 0 auto; border: none; overflow: hidden;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    </div>
-
     <!-- Parte de abajo -->
-    <footer class="bg-light text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4">
-        <!-- Red Social -->
-        <section class="mb-4">
-          <!-- Facebook -->
-          <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998"
-            href="https://www.facebook.com/p/APADEM-Colonias-Unidas-100064617312954/" role="button"><i
-              class="fab fa-facebook-f"></i></a>
-        </section>
 
-        <!-- Descripcion -->
-        <section class="mb-4">
-          <p data-key="descripcion">
-            Asociación de Padres y Amigos del Impedido Mental y Físico de las
-            Colonias Unidas. Desde 1982. Asociación civil sin fines de lucro,
-            administrada por los propios padres y personas de buena voluntad,
-            que no tienen carácter político, religioso o sectario alguno.
-          </p>
-        </section>
-        <!-- Descripcion -->
-      </div>
-      <!-- Parte de abajo -->
-
-      <!-- Texto y Contacto -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        Est. 1982-2026:
-        <a class="text-dark" data-key="contacto">APADEM Colonias Unidas. Telefono: 071720524 – 0983 533111</a>
-      </div>
-      <!-- Texto y Contacto -->
-    </footer>
-    <!-- Footer -->
-     <script src="app.js"></script>
+    <!-- Texto y Contacto -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      Est. 1982-2026:
+      <a class="text-dark" data-key="contacto">APADEM Colonias Unidas.
+        Telefono: 071720524 – 0983 533111</a>
+    </div>
+    <!-- Texto y Contacto -->
+  </footer>
+  <!-- Footer -->
+  <script src="app.js"></script>
 </body>
 
 </html>
