@@ -1,0 +1,1 @@
+Proyecto interdisciplinario para la Universidad Nacional Autonoma de Encarnacion (UNAE) [sede Colonias Unidas] relacionado a una aplicación o pagina web tipo Teleton para registrar pacientes registrados por APADEM, organizacion sin fines de lucro para la ayuda humanitaria de pacientes, entrega de medicamentos entre otros.
