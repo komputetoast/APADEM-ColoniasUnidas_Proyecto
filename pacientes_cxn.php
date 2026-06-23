@@ -1,14 +1,16 @@
 <?php
-function connection(){
-    // Cambiar por la IP del servidor y credenciales, esta vez son locales
+function connection() {
     $host = "127.0.0.1";
     $user = "root";
     $pass = "";
+    $bd   = "datosmedicos";
 
-    $bd = "pacientes.php";
-    $connect = mysqli_connect($nombre, $cedula, $descripcion, $medicamento, $resuelto);
-    mysqli_select_db($connect, $bd);
+    $connect = mysqli_connect($host, $user, $pass, $bd);
+
+    if (!$connect) {
+        die("Error de conexión: " . mysqli_connect_error());
+    }
 
     return $connect;
-};
+}
 ?>
