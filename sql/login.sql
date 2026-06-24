@@ -1,7 +1,10 @@
+CREATE DATABASE IF NOT EXISTS PERSONALAPADEM;
+
 CREATE TABLE usuarios (
     id         INT          NOT NULL AUTO_INCREMENT,
-    usuario    VARCHAR(50)  NOT NULL UNIQUE,
+    correo     VARCHAR(150) NOT NULL UNIQUE,
     password   VARCHAR(255) NOT NULL,
+    admin      BOOLEAN      NOT NULL DEFAULT FALSE,
 
     PRIMARY KEY (id)
 );

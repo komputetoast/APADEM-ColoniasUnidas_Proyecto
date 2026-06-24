@@ -5,9 +5,8 @@ $con = connection();
 $sql   = "SELECT * FROM pacientemedico";
 $query = mysqli_query($con, $sql);
 
-session_start();
-if (!isset($_SESSION['admin'])){
-    header("Location:pacientes_sesion.php");
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
+    header("Location: pacientes_sesion.php");
     exit();
 }
 header("Location:pacientes.php");
@@ -136,7 +135,7 @@ exit();
                     <a class="nav-link" data-key="transparencia" href="logros.html">Transparencia</a>
                 </li>
             </ul>
-            <a class="btn btn-pacientes my-2 my-sm-0 ms-2" role="button" data-key="pacientes" href="pacientes.php">
+            <a class="btn btn-pacientes my-2 my-sm-0 ms-2" role="button" data-key="pacientes" href="pacientes_logout.php">
                 Cerrar Sesión
             </a>
         </div>
