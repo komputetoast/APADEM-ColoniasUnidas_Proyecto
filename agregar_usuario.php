@@ -1,18 +1,31 @@
 <?php
-//Programa temporal para agregar usuario designado para acceder al sistema, ejecutar solamente una vez
 require('pacientes_cxn2.php');
 
-$servername = "127.0.0.1";
-$username   = "root";
-$password   = "";
-$dbname     = "personalapadem";
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $role = $_POST['role']; // Si quieres permitir que el admin lo elija
 
-$correo   = "ejemploadmin@apadem.com";
-$password = password_hash("ejemplo3003", PASSWORD_BCRYPT);
-$admin    = 1;
+    // Hash de la contraseña
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-$sql  = $pdo->prepare("INSERT INTO usuarios (correo, password, admin) VALUES (?, ?, ?)");
-$sql->execute([$correo, $password, $admin]);
+    // Insertar en la base de datos
+    $sql = "INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$username, $hashed_password, $email, $role]);
 
-echo "Usuario creado correctamente.";
+    echo "Usuario registrado con éxito.";
+}
 ?>
+
+<form method="post">
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <select name="role">
+        <option value="user">Usuario</option>
+        <option value="admin">Administrador</option>
+    </select>
+    <button type="submit">Register</button>
+</form>

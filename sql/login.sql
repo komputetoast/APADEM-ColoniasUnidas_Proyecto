@@ -1,10 +1,11 @@
-CREATE DATABASE IF NOT EXISTS PERSONALAPADEM;
+CREATE DATABASE apadempersonal;
 
-CREATE TABLE usuarios (
-    id         INT          NOT NULL AUTO_INCREMENT,
-    correo     VARCHAR(150) NOT NULL UNIQUE,
-    password   VARCHAR(255) NOT NULL,
-    admin      BOOLEAN      NOT NULL DEFAULT FALSE,
+USE apadempersonal;
 
-    PRIMARY KEY (id)
+CREATE TABLE users (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    role ENUM('admin', 'user') DEFAULT 'user' NOT NULL
 );

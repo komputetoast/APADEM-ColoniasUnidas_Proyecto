@@ -1,16 +1,16 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'admin') {
+    header("Location: pacientes_sesion.php");
+    exit();
+}
+
 require('pacientes_cxn.php');
 $con = connection();
 
 $sql   = "SELECT * FROM pacientemedico";
 $query = mysqli_query($con, $sql);
-
-if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
-    header("Location: pacientes_sesion.php");
-    exit();
-}
-header("Location:pacientes.php");
-exit();
 ?>
 
 <!DOCTYPE html>
